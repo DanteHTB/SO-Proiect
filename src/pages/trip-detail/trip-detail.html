@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar  color="primary">
+    <ion-title>
+      <span ion-text>{{ trip.name }}</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="common-bg">
+  <ion-slides class="to-top" pager>
+    <ion-slide *ngFor="let image of trip.images">
+      <img [src]="image" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <!--booking form-->
+  <div class="card round" margin>
+    <div class="border-bottom" padding>
+      <ion-list>
+        <ion-item>
+          <ion-label color="primary">Numar Persoane</ion-label>
+          <ion-select value="number" ok-text="Okay" cancel-text="Dismiss">
+            <ion-option value="0">0</ion-option>
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+            <ion-option value="6">6</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <button ion-button class="pull-right" color="captain" tappable (click)="rezerva()">Rezerva Acum</button><br>
+    </div>
+    <div padding></div>
+  </div>
+
+  <!--description-->
+  <div class="border-bottom" padding>
+    <span ion-text color="primary" class="bold">DESCRIERE</span>
+    <p ion-text>{{ trip.description }}</p>
+  </div>
+
+  <!--address-->
+  <div class="border-bottom" padding>
+    <span ion-text color="primary" class="bold">LOCATIE</span>
+    <p ion-text>{{ trip.location }}</p>
+  </div>
+</ion-content>

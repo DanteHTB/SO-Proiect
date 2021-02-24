@@ -1,0 +1,293 @@
+// http://ionicframework.com/docs/theming/
+// --------------------------------------------------
+
+// global styles
+.primary-bg {
+  background-color: color($colors, primary) !important;
+}
+.secondary-bg {
+  background-color: color($colors, secondary) !important;
+}
+.common-bg {
+  background-color: #FAFBFC;
+}
+.white-bg {
+  background-color: #fff;
+}
+.detail-bg {
+  background-color: #f1f1f5;
+}
+.captain-bg {
+  background-color: #bebebe;
+}
+.text-primary {
+  color: color($colors, primary);
+}
+.text-secondary {
+  color: color($colors, secondary);
+}
+.text-white {
+  color: #fff;
+}
+
+// Helpers
+.no-padding {
+  padding: 0 !important;
+}
+.no-pl {
+  padding-left: 0 !important;
+}
+.no-margin {
+  margin: 0;
+}
+.no-marginT {
+  margin-top: 0 !important;
+}
+.full-width {
+  width: 100% !important;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.pull-center {
+  margin: 0 auto;
+}
+
+.rlt {
+  position: relative;
+}
+.clear {
+  clear: both;
+}
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+}
+.padding-sm {
+  padding: 1rem;
+}
+
+// text size
+.text-2x {
+  font-size: 2em;
+}
+.text-1x {
+  font-size: 1em;
+}
+.text-sm {
+  font-size: 0.7em;
+}
+.bold {
+  font-weight: bold !important;
+}
+
+// buttons configs
+.btn-facebook {
+  background-color: #3B5999;
+}
+.btn-twitter {
+  background-color: #00ACEE;
+}
+.btn-gplus {
+  background-color: #E04006
+}
+
+// card style
+.card {
+  background: #FFF;
+  border-radius: 1rem;
+  box-shadow: 0 0 1px rgba(86, 61, 124, 0.2), 0 2px 4px rgba(86, 61, 124, 0.15);
+}
+
+// navbar style
+ion-navbar.no-border {
+  .toolbar-background {
+    border: none;
+  }
+}
+
+// list style
+.list-no-border {
+  .item:first-child {
+    border: none;
+  }
+  .item:last-child {
+    border: none;
+  }
+  .item {
+    .item-inner {
+      border: none;
+    }
+  }
+}
+.list-full-border {
+  @extend .list-no-border;
+  .item,
+  .item:first-child,
+  .item:last-child {
+    border-bottom: 1px solid rgba(86, 61, 124, 0.2);
+    .item-inner {
+      border: none;
+    }
+  }
+}
+
+// item style
+.item.no-border {
+  .item-inner {
+    border: none;
+  }
+}
+
+// style for auth pages
+.auth-page {
+    content: "";
+    background: url("../assets/img/bg.jpg") no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .login-content {
+      width: 90%;
+      .logo {
+        width: 228px;
+        height: 178px;
+        margin: 40px auto 0;
+        border-radius: 10%;
+        background: url("../assets/img/utilizator.png") no-repeat;
+        background-size: 100%;
+      }
+      .list-form {
+        padding: 0;
+        margin-bottom: 0;
+        ion-item {
+          background: none;
+          padding: 0;
+          &:first-child {
+            border-top: none;
+          }
+          &:after {
+            display: none;
+          }
+          ion-label {
+            font-size: 1em;
+            color: color($colors, primary);
+          }
+          input {
+            color: color($colors, primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Menu user profile
+.user-profile {
+  .user-avatar {
+    width: 68px;
+    height: 68px;
+    display: inline-block;
+    border-radius: 50%;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .toolbar-background {
+    background-color: color($colors, secondary) !important;
+  }
+  .other-data {
+    .column {
+      &:first-child {
+        border-right: 1px solid rgba(36, 50, 157, .25);
+      }
+    }
+  }
+}
+
+// styles for hotels
+.hotel-bg {
+  background-position: center;
+  .bg-filter {
+    position: relative;
+    height: 150px;
+    background: rgba(0, 0, 0, .5);
+    .bottom-info {
+      position: absolute;
+      width: 100%;
+      bottom: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+
+// style for slider
+ion-slides.to-top {
+  height: auto;
+  margin-bottom: -5px;
+  .swiper-pagination {
+    display: block !important;
+    .swiper-pagination-bullet {
+      background: color($colors, light);
+    }
+  }
+}
+.to-top {
+  height: auto;
+  margin-bottom: -5px;
+}
+.to-bot {
+  height: auto;
+  margin-top: -5px;
+}
+
+// remove shadow from header
+.md {
+  ion-header {
+    &.no-shadow::after {
+      background-image: none;
+    }
+  }
+  ion-toolbar,
+  ion-navbar {
+    .button,
+    .button.activated {
+      box-shadow: none;
+    }
+  }
+}
+
+// Animate CSS
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
