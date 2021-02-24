@@ -1,3 +1,3 @@
 # SO-Proiect
 
-Tip - The - Trip
+Tip - The - Trip // APP in Ionic/Angular
